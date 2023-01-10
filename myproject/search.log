@@ -1,0 +1,7 @@
+ImmutableMultiDict([('phrase', 'esto es una prueba desde el navegador'), ('letters', 'aeiou')])|127.0.0.1|Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:108.0) Gecko/20100101 Firefox/108.0|{'u', 'e', 'o', 'a'}
+ImmutableMultiDict([('phrase', 'esto es una prueba desde el navegador 1234'), ('letters', 'aeiou')])|127.0.0.1|Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:108.0) Gecko/20100101 Firefox/108.0|{'a', 'e', 'o', 'u'}
+ImmutableMultiDict([('phrase', 'esto es una prueba desde el navegador 1234'), ('letters', 'aeiou')])|127.0.0.1|Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:108.0) Gecko/20100101 Firefox/108.0|{'a', 'u', 'o', 'e'}
+ImmutableMultiDict([('phrase', 'esto es una prueba desde el navegador 1234'), ('letters', 'aeiou')])|127.0.0.1|Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:108.0) Gecko/20100101 Firefox/108.0|{'o', 'u', 'a', 'e'}
+ImmutableMultiDict([('phrase', 'sdfsdfntertwe'), ('letters', 'aeiou')])|127.0.0.1|Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:108.0) Gecko/20100101 Firefox/108.0|{'e'}
+ImmutableMultiDict([('phrase', 'aaeeeeiii'), ('letters', 'aeiou')])|127.0.0.1|Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:108.0) Gecko/20100101 Firefox/108.0|{'i', 'e', 'a'}
+ImmutableMultiDict([('phrase', 'esto es una prueba'), ('letters', 'aeiou')])|127.0.0.1|Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:108.0) Gecko/20100101 Firefox/108.0|{'o', 'e', 'u', 'a'}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<link rel="stylesheet" href="/static/mystyle.css">
+<body>
+<h2>{{ the_title }}</h2>
+
+<form method="post" action="/results">
+<table>
+<p>
+Use this form to submit a search request:
+</p>
+<tr><td>Phrase:</td><td><input name="phrase"
+type="TEXT" width="60"></td></tr>
+<tr><td>Letters:</td><td><input name="letters"
+type="TEXT" value="aeiou"></td></tr>
+</table>
+<p>When you are ready, click start button:</p>
+<p><input value="START" type="SUBMIT"></p>
+</form>
+
+</body>
+</html>
