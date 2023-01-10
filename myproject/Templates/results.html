@@ -1,20 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'layout.html' %}
 
-<h2>{{ the_title }}</h2>
-<p>You submitted the following data:</p>
+{% block title %}Home{% endblock %}
+
+{% block content %}
+
+<p>{{ username }}, you submitted the following data:</p>
 <table>
 <tr><td>Phrase:</td><td>{{ the_phrase }}</td></tr>
 <tr><td>Letters:</td><td>{{ the_letters }}</td></tr>
 </table>
 <p>When "{{ the_phrase }}" is search for "{{ the_letters }}",
-the following results are founded:</p>
+the following results are found:</p>
 <h3>{{ the_results }}</h3>
 
-</body>
-</html>
+
+{% endblock %}

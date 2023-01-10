@@ -1,15 +1,15 @@
-{% extends 'layout.html' %}
+{% extends 'layout_anonymous.html' %}
 
 {% block title %}Home{% endblock %}
 
 {% block content %}
 <h2>Home Page</h2>
-<p>Welcome back, {{ username }}!</p>
+<p>You are visiting the web as an anonymous user</p>
 
 
-<form method="post" action="/results">
+<form method="post" action="/results_anonymous">
 <table>
-<p>Welcome back, {{ username }}!</p>
+<p>Nice to meet you, anonymous!</p>
     <p>
 Use this form to submit a search request:
 </p>
