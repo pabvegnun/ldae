@@ -19,6 +19,14 @@
             <td>Email:</td>
             <td>{{ account['email'] }}</td>
         </tr>
+        <tr>
+            <td>Total visits of {{ account['username'] }}:</td>
+            <td>{{ las_visitas_usuario }}</td>
+        </tr>
+        <tr>
+            <td>Total visits:</td>
+            <td>{{ las_visitas_totales['count(*)'] }}</td>
+        </tr>
     </table>
 </div>
 {% endblock %}

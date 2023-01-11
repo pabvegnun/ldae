@@ -3,6 +3,7 @@ from search4web import search4letters
 from flask_mysqldb import MySQL
 import MySQLdb.cursors
 import re
+from datetime import datetime
 
 
 app = Flask(__name__)\
@@ -47,8 +48,10 @@ def search_page_anonymous() -> 'html':
     cursor.execute(_SQL, ('anonymous',
                           1,))
     conn.commit()
+    date = datetime.now()
+    date_return = str(date)
     return render_template('search_page_anonymous.html',
-                           the_title='Welcome to search for letters on the web!')
+                           the_title='Welcome to search for letters on the web!', la_fecha=date_return)
 
 @app.route('/results', methods=['POST','GET'])
 def do_search() -> str:
@@ -69,7 +72,7 @@ def do_search() -> str:
                       letters,
                       remote_addr,
                       session['username'],
-                      'res', ))
+                      str(res), ))
     conn.commit()
     return render_template('results.html', the_phrase=phrase, the_letters=letters, the_results=res, username=session['username'])
 
@@ -198,7 +201,9 @@ def home():
         cursor.execute(_SQL, (session['username'],
                               1,))
         conn.commit()
-        return render_template('home.html', username=session['username'])
+        date = datetime.now()
+        date_return = str(date)
+        return render_template('home.html', username=session['username'], la_fecha = date_return)
     # User is not loggedin redirect to login page
     return redirect(url_for('login'))
 
@@ -212,7 +217,10 @@ def profile():
         cursor.execute('SELECT * FROM accounts WHERE id = %s', (session['id'],))
         account = cursor.fetchone()
         # Show the profile page with account info
-        return render_template('profile.html', account=account)
+        visitas_totales = cursor.execute('SELECT count(*) from counter')
+        visitas_totales = cursor.fetchone()
+        visitas_usuario = cursor.execute(' SELECT * FROM counter WHERE USER = %s', (account['username'],))
+        return render_template('profile.html', account=account, las_visitas_totales=visitas_totales, las_visitas_usuario=visitas_usuario)
     # User is not loggedin redirect to login page
     return redirect(url_for('login'))
 
