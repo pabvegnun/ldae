@@ -1,0 +1,25 @@
+{% extends 'layout_anonymous.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<h2>Home Page</h2>
+<p>You are visiting the web as an anonymous user. Local date/time is: {{la_fecha}}</p>
+
+
+<form method="post" action="/results_anonymous">
+<table>
+<p>Nice to meet you, anonymous!</p>
+    <p>
+Use this form to submit a search request:
+</p>
+<tr><td>Phrase:</td><td><input name="phrase"
+type="TEXT" width="60"></td></tr>
+<tr><td>Letters:</td><td><input name="letters"
+type="TEXT" value="aeiou"></td></tr>
+</table>
+<p>When you are ready, click start button:</p>
+<p><input value="START" type="SUBMIT"></p>
+</form>
+
+{% endblock %}
